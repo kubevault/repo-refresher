@@ -1,0 +1,7 @@
+github.com/kubevault/apimachinery
+github.com/kubevault/cli
+github.com/kubevault/installer
+github.com/kubevault/kubevault
+github.com/kubevault/operator
+github.com/kubevault/prometheus-exporter
+github.com/kubevault/unsealer
