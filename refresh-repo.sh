@@ -37,7 +37,7 @@ refresh() {
             go mod tidy
         fi
         go mod edit \
-            -require=kmodules.xyz/client-go@dc29246d1e2be91c60fbeda0dfe5a9328f54c296 \
+            -require=kmodules.xyz/client-go@1158390a19cd63d46b6a4d308218a228dfa87772 \
             -require=kmodules.xyz/webhook-runtime@e489faf01981d2f3afa671989388c7b6f22b6baa \
             -require=kmodules.xyz/resource-metadata@71d20972a852023700c09915cbe6ccab0321ac17 \
             -require=kmodules.xyz/custom-resources@1631fae03a1aa8ea79f1321f133b1255a71e025e \
