@@ -42,7 +42,7 @@ refresh() {
             -require=kmodules.xyz/webhook-runtime@5c602fd5cf06e13243a079a7cbd5dc50b9059b08 \
             -require=kmodules.xyz/resource-metadata@ed8d9b48f9162a40f083d31dc94c994dbcb85fc2 \
             -require=kmodules.xyz/custom-resources@1631fae03a1aa8ea79f1321f133b1255a71e025e \
-            -require=kmodules.xyz/objectstore-api@b1e60a2fd3a0585c0ffa2b0db42664c6f628de24 \
+            -require=kmodules.xyz/objectstore-api@df749235585ee17334acaba77bf7eed7b4e91e26 \
             -require=go.bytebuilders.dev/license-verifier@v0.9.3 \
             -require=go.bytebuilders.dev/license-verifier/kubernetes@v0.9.3 \
             -require=gomodules.xyz/x@v0.0.7 \
