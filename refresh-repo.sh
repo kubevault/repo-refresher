@@ -6,7 +6,7 @@ SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}")
 
 GITHUB_USER=${GITHUB_USER:-1gtm}
 PR_BRANCH=kubevault-repo-refresher # -$(date +%s)
-COMMIT_MSG="Log warning if Community License is used with non-demo namespace"
+COMMIT_MSG="Update dependencies to publish SiteInfo"
 
 REPO_ROOT=/tmp/kubevault-repo-refresher
 
@@ -37,16 +37,18 @@ refresh() {
             go mod tidy
         fi
         go mod edit \
-            -require=kmodules.xyz/client-go@f005c6dfcb323e650d7b4ef61b2588686c2b9f57 \
-            -require=kmodules.xyz/monitoring-agent-api@0323c6034f702a930f63a38e52dd7535b3534622 \
-            -require=kmodules.xyz/webhook-runtime@f6ab57afa7e47c6379d41bfefda37e260e7274c3 \
-            -require=kmodules.xyz/resource-metadata@8f6a3d706da589c610fd36f90a2fd1277bfc45c5 \
-            -require=kmodules.xyz/custom-resources@c63be82e13c05bb79e9d50eaec806f51cdaf333f \
-            -require=kmodules.xyz/objectstore-api@d39859fc2d56e06d4639e1c3ecb36e52d47250ad \
+            -require=kmodules.xyz/client-go@8df5bb467db6110ee099d34621d435b9d1953ebe \
+            -require=kmodules.xyz/monitoring-agent-api@38ca075a2dbde85cf48d84b699720925066a5f3a \
+            -require=kmodules.xyz/webhook-runtime@7f73c2ab318a43feb61f11696815d2abdc745af1 \
+            -require=kmodules.xyz/resource-metadata@v0.6.3 \
+            -require=kmodules.xyz/custom-resources@e9bf309631aec2b531b9a9e24d54881cfcfcd905 \
+            -require=kmodules.xyz/objectstore-api@fdf68f88ea6e6b92a3c31339128b3551e2bc9742 \
             -require=go.bytebuilders.dev/license-verifier@v0.9.3 \
             -require=go.bytebuilders.dev/license-verifier/kubernetes@v0.9.3 \
+            -require=go.bytebuilders.dev/audit@v0.0.8 \
             -require=gomodules.xyz/x@v0.0.8 \
             -replace=github.com/satori/go.uuid=github.com/gofrs/uuid@v4.0.0+incompatible \
+            -replace=github.com/dgrijalva/jwt-go=github.com/golang-jwt/jwt@v3.2.1+incompatible \
             -replace=helm.sh/helm/v3=github.com/kubepack/helm/v3@v3.6.1-0.20210518225915-c3e0ce48dd1b \
             -replace=k8s.io/apiserver=github.com/kmodules/apiserver@v0.21.2-0.20210716212718-83e5493ac170
         go mod tidy
