@@ -40,12 +40,12 @@ refresh() {
             -require=kmodules.xyz/client-go@8df5bb467db6110ee099d34621d435b9d1953ebe \
             -require=kmodules.xyz/monitoring-agent-api@38ca075a2dbde85cf48d84b699720925066a5f3a \
             -require=kmodules.xyz/webhook-runtime@7f73c2ab318a43feb61f11696815d2abdc745af1 \
-            -require=kmodules.xyz/resource-metadata@v0.6.3 \
-            -require=kmodules.xyz/custom-resources@e9bf309631aec2b531b9a9e24d54881cfcfcd905 \
+            -require=kmodules.xyz/resource-metadata@v0.6.4 \
+            -require=kmodules.xyz/custom-resources@72bd9e8cae6e8ca708e6e716bef12a2f58f60b96 \
             -require=kmodules.xyz/objectstore-api@fdf68f88ea6e6b92a3c31339128b3551e2bc9742 \
             -require=go.bytebuilders.dev/license-verifier@v0.9.3 \
             -require=go.bytebuilders.dev/license-verifier/kubernetes@v0.9.3 \
-            -require=go.bytebuilders.dev/audit@v0.0.8 \
+            -require=go.bytebuilders.dev/audit@v0.0.9 \
             -require=gomodules.xyz/x@v0.0.8 \
             -replace=github.com/satori/go.uuid=github.com/gofrs/uuid@v4.0.0+incompatible \
             -replace=github.com/dgrijalva/jwt-go=github.com/golang-jwt/jwt@v3.2.1+incompatible \
