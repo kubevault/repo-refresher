@@ -6,7 +6,7 @@ SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}")
 
 GITHUB_USER=${GITHUB_USER:-1gtm}
 PR_BRANCH=kubevault-repo-refresher # -$(date +%s)
-COMMIT_MSG="Fix jwt-go security vulnerability"
+COMMIT_MSG="Fix satori/go.uuid security vulnerability"
 
 REPO_ROOT=/tmp/kubevault-repo-refresher
 
@@ -47,7 +47,7 @@ refresh() {
             -require=go.bytebuilders.dev/license-verifier/kubernetes@v0.9.3 \
             -require=go.bytebuilders.dev/audit@v0.0.10 \
             -require=gomodules.xyz/x@v0.0.8 \
-            -replace=github.com/satori/go.uuid=github.com/gofrs/uuid@v4.0.0+incompatible \
+            -replace=github.com/satori/go.uuid=github.com/gomodules/uuid@v4.0.0+incompatible \
             -replace=github.com/dgrijalva/jwt-go=github.com/gomodules/jwt@v3.2.2+incompatible \
             -replace=github.com/golang-jwt/jwt=github.com/golang-jwt/jwt@v3.2.2+incompatible \
             -replace=github.com/form3tech-oss/jwt-go=github.com/form3tech-oss/jwt-go@v3.2.5+incompatible \
