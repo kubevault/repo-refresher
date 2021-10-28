@@ -6,7 +6,7 @@ SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}")
 
 GITHUB_USER=${GITHUB_USER:-1gtm}
 PR_BRANCH=kubevault-repo-refresher # -$(date +%s)
-COMMIT_MSG="Fix satori/go.uuid security vulnerability"
+COMMIT_MSG="Update dependencies"
 
 REPO_ROOT=/tmp/kubevault-repo-refresher
 
@@ -37,7 +37,7 @@ refresh() {
             go mod tidy
         fi
         go mod edit \
-            -require=kmodules.xyz/client-go@8df5bb467db6110ee099d34621d435b9d1953ebe \
+            -require=kmodules.xyz/client-go@0cf6ea46b0306b255a82f14b00b374027b0e9192 \
             -require=kmodules.xyz/monitoring-agent-api@38ca075a2dbde85cf48d84b699720925066a5f3a \
             -require=kmodules.xyz/webhook-runtime@7f73c2ab318a43feb61f11696815d2abdc745af1 \
             -require=kmodules.xyz/resource-metadata@v0.6.4 \
@@ -45,7 +45,7 @@ refresh() {
             -require=kmodules.xyz/objectstore-api@fdf68f88ea6e6b92a3c31339128b3551e2bc9742 \
             -require=go.bytebuilders.dev/license-verifier@v0.9.3 \
             -require=go.bytebuilders.dev/license-verifier/kubernetes@v0.9.3 \
-            -require=go.bytebuilders.dev/audit@v0.0.10 \
+            -require=go.bytebuilders.dev/audit@v0.0.11 \
             -require=gomodules.xyz/x@v0.0.8 \
             -replace=github.com/satori/go.uuid=github.com/gomodules/uuid@v4.0.0+incompatible \
             -replace=github.com/dgrijalva/jwt-go=github.com/gomodules/jwt@v3.2.2+incompatible \
