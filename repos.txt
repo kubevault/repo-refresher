@@ -1,6 +1,5 @@
-github.com/kubevault/apimachinery
-github.com/kubevault/cli
-github.com/kubevault/installer
-github.com/kubevault/kubevault
-github.com/kubevault/operator
-github.com/kubevault/unsealer
+kubevault/apimachinery
+kubevault/cli
+kubevault/installer
+kubevault/operator
+kubevault/unsealer
