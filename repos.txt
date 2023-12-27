@@ -1,4 +1,3 @@
-kubevault/apimachinery
 kubevault/cli
 kubevault/installer
 kubevault/operator

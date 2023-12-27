@@ -30,6 +30,20 @@ refresh() {
     git clone --no-tags --no-recurse-submodules --depth=1 https://${GITHUB_USER}:${GITHUB_TOKEN}@$1.git
     cd $(ls -b1)
     git checkout -b $PR_BRANCH
+
+    sed -i 's/?=\ 1.20/?=\ 1.21/g' Makefile
+    sed -i 's|appscode/gengo:release-1.25|appscode/gengo:release-1.29|g' Makefile
+    sed -i 's/goconst,//g' Makefile
+
+    pushd .github/workflows/ && {
+        # update GO
+        sed -i 's/Go\ 1.20/Go\ 1.21/g' *
+        sed -i 's/go-version:\ ^1.20/go-version:\ ^1.21/g' *
+        sed -i 's/go-version:\ 1.20/go-version:\ 1.21/g' *
+        popd
+    }
+
+
     if [ -f go.mod ]; then
         if [ "$1" != "github.com/kubevault/apimachinery" ]; then
             go mod edit \
